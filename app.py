@@ -1,5 +1,5 @@
 """
-Sench Sanch Sales Tracker
+Ahorklo Daily Sales Desk
 --------------------
 A tiny Flask backend for a shop owner to record sales through the browser
 and see running totals, and profit or loss, update live without touching a terminal.
@@ -13,26 +13,12 @@ Then open http://127.0.0.1:5000 in a browser.
 
 from functools import wraps
 from flask import Flask, request, jsonify, render_template, Response, session, redirect, url_for
-from jinja2 import ChoiceLoader, FileSystemLoader
-import os
 from werkzeug.security import generate_password_hash, check_password_hash
 
 from datetime import datetime
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-TEMPLATES_DIR = os.path.join(BASE_DIR, "templates")
-
-# Support both layouts:
-#   1) templates/*.html (standard Flask layout)
-#   2) *.html beside app.py (the layout used by some Render/GitHub versions)
-# This prevents TemplateNotFound when the repository is deployed with HTML
-# files in the project root.
 app = Flask(__name__)
-app.jinja_loader = ChoiceLoader([
-    FileSystemLoader(BASE_DIR),
-    FileSystemLoader(TEMPLATES_DIR),
-])
-app.secret_key = os.environ.get("SECRET_KEY", "sench-sanch-dev-secret")
+app.secret_key = "daily-till-dev-secret"  # change this before deploying publicly
 
 # ---------------------------------------------------------------------------
 # User accounts.
@@ -62,10 +48,10 @@ users = {
         "role": "manager",
         "display_name": "Shop Manager",
     },
-    "sench": {
+    "ahorklo": {
         "password_hash": generate_password_hash("backstage123"),
         "role": "owner",
-        "display_name": "Sench Sanch",
+        "display_name": "Ahorklo",
     },
 }
 
@@ -81,7 +67,7 @@ activity_log = []
 
 # Shop-wide settings the owner can edit from backstage.
 settings = {
-    "shop_name": "Sench Sanch Sales Tracker",
+    "shop_name": "Ahorklo Daily Sales Desk",
     "currency": "GHS",
 }
 

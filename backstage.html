@@ -6,21 +6,21 @@
 <title>{{ settings.shop_name }} — Backstage</title>
 <style>
     :root {
-        --bg: #05070a; --card: #12181a; --teal: #17322f; --teal-soft: #1f3d39;
-        --orange: #f0a63e; --orange-light: #f7c169; --text: #f0ece1; --muted: #9a9689;
-        --border: rgba(245, 239, 227, 0.08); --red: #f87171; --green: #34d399;
+        --bg: #f4f8ff; --card: #ffffff; --blue-deep: #0b3d91; --blue-soft: #1456b8;
+        --blue: #1565d8; --blue-light: #2f80ed; --text: #0f172a; --muted: #64748b;
+        --border: rgba(21,101,216,0.12); --red: #f87171; --green: #34d399;
     }
     * { box-sizing: border-box; }
     body {
         margin: 0; font-family: 'Segoe UI', Arial, sans-serif; color: var(--text);
-        background: radial-gradient(circle at 15% 0%, #0f1d1b 0%, #05070a 45%), var(--bg);
+        background: radial-gradient(circle at 15% 0%, #dbeafe 0%, #f4f8ff 45%), var(--bg);
         padding: 1.5rem 1rem 4rem;
     }
     .container { max-width: 760px; margin: 0 auto; }
     header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem; flex-wrap: wrap; gap: 0.6rem; }
     .back-link { color: var(--muted); text-decoration: none; font-size: 0.85rem; }
     .back-link:hover { color: var(--text); }
-    .eyebrow { text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.7rem; font-weight: 700; color: var(--orange-light); margin: 0 0 0.4rem; }
+    .eyebrow { text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.7rem; font-weight: 700; color: var(--blue-light); margin: 0 0 0.4rem; }
     h1.page-title { font-family: Georgia, serif; font-size: 1.7rem; margin: 0.2rem 0 0.3rem; }
     .subtitle { color: var(--muted); font-size: 0.88rem; margin: 0 0 1.5rem; }
 
@@ -40,16 +40,16 @@
     .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem; }
     input, select {
         padding: 0.65rem 0.8rem; border: 1px solid var(--border); border-radius: 10px;
-        background: #0d1214; font-size: 0.9rem; color: var(--text);
+        background: #f8fbff; font-size: 0.9rem; color: var(--text);
     }
     input { width: 100%; }
     select.role-select { padding: 0.4rem 0.5rem; font-size: 0.82rem; width: auto; }
-    input:focus, select:focus { outline: none; border-color: var(--orange); }
+    input:focus, select:focus { outline: none; border-color: var(--blue); }
     button.primary {
-        padding: 0.7rem 1.2rem; border: none; border-radius: 999px; background: var(--orange);
+        padding: 0.7rem 1.2rem; border: none; border-radius: 999px; background: var(--blue);
         color: #1c1305; font-weight: 700; font-size: 0.88rem; cursor: pointer; margin-top: 0.3rem;
     }
-    button.primary:hover { background: var(--orange-light); }
+    button.primary:hover { background: var(--blue-light); }
     button.danger-btn {
         padding: 0.4rem 0.8rem; border-radius: 999px; border: 1px solid rgba(248,113,113,0.35);
         background: rgba(248,113,113,0.08); color: #fca5a5; font-size: 0.78rem; cursor: pointer;
@@ -63,7 +63,7 @@
         font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700;
         padding: 0.2rem 0.55rem; border-radius: 999px;
     }
-    .role-pill.owner { color: var(--orange-light); background: rgba(240,166,62,0.12); }
+    .role-pill.owner { color: var(--blue-light); background: rgba(21,101,216,0.12); }
     .role-pill.manager { color: #93c5fd; background: rgba(147,197,253,0.12); }
     .status-pill { font-size: 0.68rem; font-weight: 700; padding: 0.2rem 0.5rem; border-radius: 999px; }
     .status-pill.success { color: var(--green); background: rgba(52,211,153,0.12); }
@@ -72,6 +72,13 @@
     .scroll-table { max-height: 340px; overflow-y: auto; }
 
     footer { text-align: center; margin-top: 2rem; font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+
+/* Sench Sanch Sales Tracker — Blue & White theme */
+body { background: linear-gradient(135deg, #f4f8ff 0%, #ffffff 55%, #eaf2ff 100%) !important; }
+button, .btn, .primary, .submit-btn { background: #1565d8 !important; color: #ffffff !important; }
+button:hover, .btn:hover, .primary:hover, .submit-btn:hover { background: #0b3d91 !important; }
+input:focus, select:focus { border-color: #1565d8 !important; box-shadow: 0 0 0 3px rgba(21,101,216,.12); }
+
 </style>
 </head>
 <body>

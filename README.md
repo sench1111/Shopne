@@ -1,4 +1,4 @@
-# Sench Sanch Sales Tracker
+# Ahorklo Daily Sales Desk
 
 A small web app for a shop owner to record sales and see live totals — including profit
 or loss — no terminal required.
@@ -40,10 +40,10 @@ Default accounts (change these before sharing the project — see `users` near t
 |---|---|---|
 | `employee` | `staff123` | employee |
 | `manager` | `sales123` | manager |
-| `sench` | `backstage123` | owner |
+| `ahorklo` | `backstage123` | owner |
 
 Sign in as `manager` to reach **Team** (linked in the top-right nav for managers and the
-owner). Sign in as `sench` to reach **Backstage** (owner only) — from there you can add
+owner). Sign in as `ahorklo` to reach **Backstage** (owner only) — from there you can add
 accounts at any level, change any account's role, remove accounts, and see the complete
 sign-in and activity history for everyone, including managers.
 
