@@ -6,15 +6,15 @@
 <title>Sench Sanch Sales Tracker — Sign in</title>
 <style>
     :root {
-        --bg: #f4f8ff;
-        --card: #fffdf9;
-        --blue-deep: #0b3d91;
-        --blue-soft: #1456b8;
-        --blue: #1565d8;
-        --blue-light: #2f80ed;
-        --text: #1f2a24;
-        --muted: #64748b;
-        --border: #dbeafe;
+        --bg: #f4f8fc;
+        --card: #ffffff;
+        --teal: #0d47a1;
+        --teal-soft: #1565c0;
+        --orange: #1565c0;
+        --orange-light: #42a5f5;
+        --text: #e3f0ff;
+        --muted: #6b7c93;
+        --border: #102a43;
     }
     * { box-sizing: border-box; }
     body {
@@ -23,7 +23,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background: radial-gradient(circle at 20% 15%, #dbeafe 0%, #f4f8ff 55%), var(--bg);
+        background: radial-gradient(circle at 20% 15%, #eaf3ff 0%, #f4f8fc 55%), var(--bg);
         font-family: 'Segoe UI', Arial, sans-serif;
         color: var(--text);
         padding: 1.5rem;
@@ -31,27 +31,27 @@
     .login-card {
         width: 100%;
         max-width: 380px;
-        background: var(--blue-deep);
+        background: var(--teal);
         border-radius: 20px;
         padding: 2.5rem 2rem;
         color: #ffffff;
-        box-shadow: 0 0 0 1px rgba(21,101,216,0.08), 0 25px 60px rgba(0,0,0,0.55), 0 0 40px rgba(21,101,216,0.06);
+        box-shadow: 0 0 0 1px rgba(21,101,192,0.08), 0 25px 60px rgba(0,0,0,0.55), 0 0 40px rgba(21,101,192,0.06);
     }
     .mark {
         width: 44px; height: 44px;
-        background: var(--blue-light);
+        background: var(--orange-light);
         border-radius: 12px;
         display: flex; align-items: center; justify-content: center;
         font-size: 1.3rem;
         margin-bottom: 1.5rem;
-        box-shadow: 0 0 24px rgba(47,128,237,0.35);
+        box-shadow: 0 0 24px rgba(66,165,245,0.35);
     }
     .eyebrow {
         text-transform: uppercase;
         letter-spacing: 0.14em;
         font-size: 0.72rem;
         font-weight: 700;
-        color: var(--blue-light);
+        color: var(--orange-light);
         margin: 0 0 0.5rem;
     }
     h1 {
@@ -61,7 +61,7 @@
         margin: 0 0 0.6rem;
     }
     .subtitle {
-        color: #dbeafe;
+        color: #4b6075;
         font-size: 0.92rem;
         line-height: 1.5;
         margin: 0 0 2rem;
@@ -71,23 +71,23 @@
         font-size: 0.78rem;
         text-transform: uppercase;
         letter-spacing: 0.08em;
-        color: #dbeafe;
+        color: #4b6075;
         margin-bottom: 0.4rem;
     }
     .field { margin-bottom: 1.1rem; }
     input {
         width: 100%;
         padding: 0.8rem 0.9rem;
-        border: 1px solid rgba(21,101,216,0.18);
+        border: 1px solid rgba(245, 239, 227, 0.18);
         border-radius: 10px;
         background: rgba(245, 239, 227, 0.06);
         color: #ffffff;
         font-size: 0.95rem;
     }
-    input::placeholder { color: #94a3b8; }
+    input::placeholder { color: #607d8b; }
     input:focus {
         outline: none;
-        border-color: var(--blue-light);
+        border-color: var(--orange-light);
         background: rgba(245, 239, 227, 0.1);
     }
     button {
@@ -96,8 +96,8 @@
         padding: 0.85rem 1rem;
         border: none;
         border-radius: 999px;
-        background: var(--blue);
-        color: #1f2a24;
+        background: var(--orange);
+        color: #e3f0ff;
         font-weight: 700;
         font-size: 0.95rem;
         cursor: pointer;
@@ -107,11 +107,11 @@
         gap: 0.4rem;
         transition: background 0.15s ease;
     }
-    button:hover { background: var(--blue-light); }
+    button:hover { background: var(--orange-light); }
     .error {
-        background: rgba(220, 90, 60, 0.15);
-        border: 1px solid rgba(220, 90, 60, 0.4);
-        color: #f3b8a6;
+        background: rgba(239,68,68,0.12);
+        border: 1px solid rgba(239,68,68,0.30);
+        color: #ef4444;
         padding: 0.7rem 0.9rem;
         border-radius: 10px;
         font-size: 0.85rem;
@@ -122,16 +122,9 @@
         padding-top: 1.25rem;
         border-top: 1px solid rgba(245, 239, 227, 0.12);
         font-size: 0.78rem;
-        color: #94a3b8;
+        color: #607d8b;
         letter-spacing: 0.02em;
     }
-
-/* Sench Sanch Sales Tracker — Blue & White theme */
-body { background: linear-gradient(135deg, #f4f8ff 0%, #ffffff 55%, #eaf2ff 100%) !important; }
-button, .btn, .primary, .submit-btn { background: #1565d8 !important; color: #ffffff !important; }
-button:hover, .btn:hover, .primary:hover, .submit-btn:hover { background: #0b3d91 !important; }
-input:focus, select:focus { border-color: #1565d8 !important; box-shadow: 0 0 0 3px rgba(21,101,216,.12); }
-
 </style>
 </head>
 <body>
